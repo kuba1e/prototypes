@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="slider slider--first-slide"></div>
+    <div class="slider slider--second-slide"></div>
+    <div class="slider slider--third-slide"></div>
+    <header class="header">
+      <div class="container">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-list-item">
+              <button
+                class="btn header__menu-btn client-btn header__menu-btn--active btn-hover color-2"
+              >
+                Show clients list
+              </button>
+            </li>
+            <li class="header__menu-list-item">
+              <button
+                class="btn header__menu-btn car-btn header__menu-btn btn-hover color-2"
+              >
+                Show cars list
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__prompt-message">
+          <p class="main__prompt-message-text">Are you sure?</p>
+          <div class="main__prompt-message-control">
+            <button class="btn agree-btn btn-hover color-5">
+              <i class="fas fa-check"></i>Yes
+            </button>
+            <button class="btn disagree-btn btn-hover color-11">
+              <i class="fas fa-times"></i>No
+            </button>
+          </div>
+        </div>
+        <div
+          class="main__client-list-wrapper main__client-list-wrapper--active"
+        >
+          <button class="btn client-list__add-btn btn-hover color-4">
+            Add new client
+          </button>
+          <ul class="main__list client-list"></ul>
+        </div>
+        <div class="main__car-list-wrapper">
+          <button class="btn car-list__add-btn btn-hover color-4">
+            Add new car
+          </button>
+          <ul class="main__list car-list"></ul>
+        </div>
+      </div>
+
+      <div class="main__form-container">
+        <div class="main__close-btn">
+          <img src="./img/times-circle-regular.svg" alt="close" />
+        </div>
+        <div class="main__form-inner">
+          <form class="main__form main__form-client">
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="first-name"
+                >First name</label
+              >
+              <input
+                class="main__form-input name req"
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Name"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write you name with the first capital letter, longer
+                  then 1 symbol
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="second-name"
+                >Second Name</label
+              >
+              <input
+                class="main__form-input name req"
+                type="text"
+                name="secondName"
+                id="secondName"
+                placeholder="Second Name"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write you second name with the first capital letter,
+                  longer then 1 symbol
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="age">Your age</label>
+              <input
+                class="main__form-input age req"
+                type="text"
+                name="age"
+                id="age"
+                placeholder="Years"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write only numbers with length less then 3 digital
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="experience"
+                >Experience</label
+              >
+              <input
+                class="main__form-input experience req"
+                type="text"
+                name="experience"
+                id="experience"
+                placeholder="Years of experience"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write only numbers with length less then 3 digital
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="car">Car</label>
+              <select
+                class="main__form-input select req"
+                name="car"
+                id="car"
+                required
+              ></select>
+            </div>
+            <button
+              type="submit"
+              class="btn main__form-send-btn btn-hover color-9"
+            >
+              Add
+            </button>
+          </form>
+          <form class="main__form main__form-car">
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="brand">Brand</label>
+              <input
+                class="main__form-input text req"
+                type="text"
+                name="brand"
+                id="brand"
+                placeholder="Brand name"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write brand name with the first capital letter, longer
+                  then 1 symbol
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="year">Year of produce</label>
+              <input
+                class="main__form-input year req"
+                type="text"
+                name="year"
+                id="year"
+                placeholder="Year"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">
+                  Please write only numbers with length less then 4 digital
+                </p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="age">Price</label>
+              <input
+                class="main__form-input price req"
+                type="text"
+                name="price"
+                id="price"
+                placeholder="$"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">Please write only numbers</p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="experience">Mileage</label>
+              <input
+                class="main__form-input mileage req"
+                type="text"
+                name="mileage"
+                id="mileage"
+                placeholder="Mileage"
+                required
+              />
+              <div class="main__form-warning">
+                <p class="main__form-warning-text">Please write only numbers</p>
+              </div>
+            </div>
+            <div class="main__form-label-container">
+              <label class="main__form-label" for="crashed">Was damaged</label>
+              <select class="main__form-input req" name="crashed" id="crashed">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn main__form-send-btn btn-hover color-9"
+            >
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./js/Car.js"></script>
+    <script src="./js/Client.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
